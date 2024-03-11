@@ -1,6 +1,6 @@
 PS3='Option: '
 version_number='2.0.0'
-options=("Write an Entry" "Show All of Today's Entries" "Show a Random Entry" "Edit Today's Entries" "Edit All Entries" "Open the folder" "Tacos" "Info" "Config File" "Quit")
+options=("Write an Entry" "Show All of Today's Entries" "Show a Random Entry" "Edit Today's Entries" "Edit Random Entry" "Edit All Entries" "Open the folder" "Tacos" "Info" "Config File" "Quit")
 printf '\033[8;40;100t' # Set the size of the window
 printf 'Welcome to the JFE, below are your options.\n\nWhat would you like to do?.\n\n'
 select selection in "${options[@]}"; do
@@ -22,6 +22,10 @@ select selection in "${options[@]}"; do
         "Edit Today's Entries")
             printf '\nLoading todays entries...\n\n'
             jrnl -on today --edit
+            ;;
+        "Edit Random Entry")
+            printf '\nLoading all entries...\n\n'
+            jrnl -on "$(jrnl --short | shuf -n 1 | cut -d' ' -f1,2)" --edit
             ;;
         "Edit All Entries")
             printf '\nLoading all entries...\n\n'

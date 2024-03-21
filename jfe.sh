@@ -44,7 +44,7 @@ select selection in "${options[@]}"; do
             printf "\nThis frontend was created to make working with Jrnl a little easier. Commonly used commands can be accessed quickly and easily rather than typing them out each time.\n\nv$version_number\n\n" | fold -s
             ;;
         "Config File")
-            printf '\nSoon you will be able to access the config file from here... but not now... sorry!\n\n'
+            printf '\nOpening the Jrnl Config file...\n\n'
             output=$(jrnl --list)
             config_path=$(echo "$output" | awk 'NR==1{print $NF}')
             config_path=$(echo "$config_path" | sed 's/^\(.*\)$/\1/' | tr -d '()')

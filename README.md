@@ -44,10 +44,23 @@ Quit the front end.
 
 ### Planned Functionality
 - Simplified multi-level menus
+- Password for JFE (Likely insecure, just a deterrent to the "layman")
 
 ## Change Log
 
-### [2.0.0] - 2024--03-08
+### [3.0.0] - 2024-04-25
+
+#### Added
+
+- Starred Entries
+- Entry Titles
+
+#### Changed
+
+- Version Number
+- README Error Cleanup
+
+### [2.0.0] - 2024-03-08
 
 #### Added
 
@@ -66,7 +79,7 @@ Quit the front end.
 - Folder Option
 - README
 
-### [1.0.0] - 2024--03-07
+### [1.0.0] - 2024-03-07
 
 #### Added
 
@@ -75,7 +88,7 @@ Quit the front end.
 - Config File Option
 - Folder Option
 
-### [0.1.0] - 2024--03-05
+### [0.1.0] - 2024-03-05
 
 #### Added
 
